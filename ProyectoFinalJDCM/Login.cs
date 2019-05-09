@@ -18,14 +18,24 @@ namespace ProyectoFinalJDCM
             InitializeComponent();
         }
 
+        public String LimpiaString(String textoALimpiar)
+        {
+            String limpia = textoALimpiar;
+            Console.WriteLine(limpia);
+            limpia = limpia.Replace("'", "").Replace(";", "").Replace("-", "");
+            Console.WriteLine(limpia);
+
+            return limpia;
+        }
+
         private void btAcceder_Click(object sender, EventArgs e)
         {
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
 
             MySqlCommand comando = new MySqlCommand("" +
                 "SELECT * FROM usuarios WHERE" +
-                " usuario ='" + txbUsuario.Text +
-                "' AND pass = '" + txbPwd.Text +
+                " usuario = '" + LimpiaString(txbUsuario.Text) + //'OR 1=1 --
+                "' AND pass = '" + LimpiaString(txbPwd.Text) +
                 "' ;", conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
             if (resultado.Read())
