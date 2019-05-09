@@ -42,8 +42,8 @@ namespace ProyectoFinalJDCM
             {
                 MessageBox.Show("Acceso correcto", "Usuario OK");
                 this.Visible = false;
-                VentanaPrincipal pepe = new VentanaPrincipal();
-                pepe.Visible = true;
+                VentanaPrincipal ventana1 = new VentanaPrincipal();
+                ventana1.Visible = true;
             }
             else
             {
