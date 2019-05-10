@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listaConsultas = new System.Windows.Forms.DataGridView();
+            this.dGListaConsultas = new System.Windows.Forms.DataGridView();
             this.botonPeliculas = new System.Windows.Forms.Button();
             this.botonDirectores = new System.Windows.Forms.Button();
             this.botonActores = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.listaConsultas)).BeginInit();
+            this.labelTabla = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).BeginInit();
             this.SuspendLayout();
             // 
-            // listaConsultas
+            // dGListaConsultas
             // 
-            this.listaConsultas.AllowUserToOrderColumns = true;
-            this.listaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaConsultas.Location = new System.Drawing.Point(12, 90);
-            this.listaConsultas.Name = "listaConsultas";
-            this.listaConsultas.ReadOnly = true;
-            this.listaConsultas.Size = new System.Drawing.Size(495, 348);
-            this.listaConsultas.TabIndex = 5;
+            this.dGListaConsultas.AllowUserToOrderColumns = true;
+            this.dGListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGListaConsultas.Location = new System.Drawing.Point(12, 90);
+            this.dGListaConsultas.Name = "dGListaConsultas";
+            this.dGListaConsultas.ReadOnly = true;
+            this.dGListaConsultas.Size = new System.Drawing.Size(495, 348);
+            this.dGListaConsultas.TabIndex = 5;
             // 
             // botonPeliculas
             // 
@@ -75,26 +77,47 @@
             this.botonActores.UseVisualStyleBackColor = true;
             this.botonActores.Click += new System.EventHandler(this.botonActores_Click);
             // 
+            // labelTabla
+            // 
+            this.labelTabla.AutoSize = true;
+            this.labelTabla.Location = new System.Drawing.Point(13, 71);
+            this.labelTabla.Name = "labelTabla";
+            this.labelTabla.Size = new System.Drawing.Size(0, 13);
+            this.labelTabla.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 10;
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTabla);
             this.Controls.Add(this.botonActores);
             this.Controls.Add(this.botonDirectores);
             this.Controls.Add(this.botonPeliculas);
-            this.Controls.Add(this.listaConsultas);
+            this.Controls.Add(this.dGListaConsultas);
             this.Name = "VentanaPrincipal";
             this.Text = "VentanaPrincipal";
-            ((System.ComponentModel.ISupportInitialize)(this.listaConsultas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView listaConsultas;
+        private System.Windows.Forms.DataGridView dGListaConsultas;
         private System.Windows.Forms.Button botonPeliculas;
         private System.Windows.Forms.Button botonDirectores;
         private System.Windows.Forms.Button botonActores;
+        private System.Windows.Forms.Label labelTabla;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -59,6 +59,7 @@
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(267, 20);
             this.txbUsuario.TabIndex = 2;
+            this.txbUsuario.TextChanged += new System.EventHandler(this.txbUsuario_TextChanged);
             // 
             // txbPwd
             // 
