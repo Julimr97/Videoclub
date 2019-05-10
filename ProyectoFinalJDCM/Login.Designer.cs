@@ -79,7 +79,7 @@
             // 
             // btAcceder
             // 
-            this.btAcceder.Location = new System.Drawing.Point(171, 313);
+            this.btAcceder.Location = new System.Drawing.Point(187, 296);
             this.btAcceder.Name = "btAcceder";
             this.btAcceder.Size = new System.Drawing.Size(75, 23);
             this.btAcceder.TabIndex = 4;
