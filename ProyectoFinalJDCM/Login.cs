@@ -51,5 +51,10 @@ namespace ProyectoFinalJDCM
             }
 
         }
+
+        private void txbUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
