@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipal));
             this.dGListaConsultas = new System.Windows.Forms.DataGridView();
             this.botonPeliculas = new System.Windows.Forms.Button();
             this.botonDirectores = new System.Windows.Forms.Button();
             this.botonActores = new System.Windows.Forms.Button();
             this.labelTabla = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dGListaConsultas
@@ -49,32 +52,45 @@
             // 
             // botonPeliculas
             // 
-            this.botonPeliculas.Location = new System.Drawing.Point(646, 90);
+            this.botonPeliculas.BackColor = System.Drawing.Color.Transparent;
+            this.botonPeliculas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonPeliculas.BackgroundImage")));
+            this.botonPeliculas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.botonPeliculas.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonPeliculas.ForeColor = System.Drawing.SystemColors.Control;
+            this.botonPeliculas.Location = new System.Drawing.Point(572, 82);
             this.botonPeliculas.Name = "botonPeliculas";
-            this.botonPeliculas.Size = new System.Drawing.Size(75, 23);
+            this.botonPeliculas.Size = new System.Drawing.Size(157, 31);
             this.botonPeliculas.TabIndex = 6;
             this.botonPeliculas.Text = "Peliculas";
-            this.botonPeliculas.UseVisualStyleBackColor = true;
+            this.botonPeliculas.UseVisualStyleBackColor = false;
             this.botonPeliculas.Click += new System.EventHandler(this.botonPeliculas_Click);
             // 
             // botonDirectores
             // 
-            this.botonDirectores.Location = new System.Drawing.Point(646, 119);
+            this.botonDirectores.BackColor = System.Drawing.Color.Transparent;
+            this.botonDirectores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonDirectores.BackgroundImage")));
+            this.botonDirectores.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonDirectores.ForeColor = System.Drawing.SystemColors.Control;
+            this.botonDirectores.Location = new System.Drawing.Point(572, 119);
             this.botonDirectores.Name = "botonDirectores";
-            this.botonDirectores.Size = new System.Drawing.Size(75, 23);
+            this.botonDirectores.Size = new System.Drawing.Size(157, 31);
             this.botonDirectores.TabIndex = 7;
             this.botonDirectores.Text = "Directores";
-            this.botonDirectores.UseVisualStyleBackColor = true;
+            this.botonDirectores.UseVisualStyleBackColor = false;
             this.botonDirectores.Click += new System.EventHandler(this.botonDirectores_Click);
             // 
             // botonActores
             // 
-            this.botonActores.Location = new System.Drawing.Point(646, 148);
+            this.botonActores.BackColor = System.Drawing.Color.Transparent;
+            this.botonActores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonActores.BackgroundImage")));
+            this.botonActores.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonActores.ForeColor = System.Drawing.SystemColors.Control;
+            this.botonActores.Location = new System.Drawing.Point(572, 156);
             this.botonActores.Name = "botonActores";
-            this.botonActores.Size = new System.Drawing.Size(75, 23);
+            this.botonActores.Size = new System.Drawing.Size(157, 31);
             this.botonActores.TabIndex = 8;
             this.botonActores.Text = "Actores";
-            this.botonActores.UseVisualStyleBackColor = true;
+            this.botonActores.UseVisualStyleBackColor = false;
             this.botonActores.Click += new System.EventHandler(this.botonActores_Click);
             // 
             // labelTabla
@@ -93,11 +109,23 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(218, 91);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTabla);
             this.Controls.Add(this.botonActores);
@@ -107,6 +135,7 @@
             this.Name = "VentanaPrincipal";
             this.Text = "VentanaPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +148,6 @@
         private System.Windows.Forms.Button botonActores;
         private System.Windows.Forms.Label labelTabla;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

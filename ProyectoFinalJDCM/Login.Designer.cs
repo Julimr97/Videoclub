@@ -74,6 +74,7 @@
             // 
             this.txbPwd.Location = new System.Drawing.Point(100, 254);
             this.txbPwd.Name = "txbPwd";
+            this.txbPwd.PasswordChar = '*';
             this.txbPwd.Size = new System.Drawing.Size(267, 20);
             this.txbPwd.TabIndex = 3;
             // 
