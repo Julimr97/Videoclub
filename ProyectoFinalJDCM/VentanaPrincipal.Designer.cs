@@ -36,6 +36,8 @@
             this.labelTabla = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonStock = new System.Windows.Forms.Button();
+            this.butonAñadirPelis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +49,7 @@
             this.dGListaConsultas.Location = new System.Drawing.Point(12, 90);
             this.dGListaConsultas.Name = "dGListaConsultas";
             this.dGListaConsultas.ReadOnly = true;
-            this.dGListaConsultas.Size = new System.Drawing.Size(495, 348);
+            this.dGListaConsultas.Size = new System.Drawing.Size(490, 348);
             this.dGListaConsultas.TabIndex = 5;
             // 
             // botonPeliculas
@@ -61,7 +63,7 @@
             this.botonPeliculas.Name = "botonPeliculas";
             this.botonPeliculas.Size = new System.Drawing.Size(157, 31);
             this.botonPeliculas.TabIndex = 6;
-            this.botonPeliculas.Text = "Peliculas";
+            this.botonPeliculas.Text = "Películas";
             this.botonPeliculas.UseVisualStyleBackColor = false;
             this.botonPeliculas.Click += new System.EventHandler(this.botonPeliculas_Click);
             // 
@@ -119,12 +121,42 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonStock
+            // 
+            this.buttonStock.BackColor = System.Drawing.Color.Transparent;
+            this.buttonStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStock.BackgroundImage")));
+            this.buttonStock.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStock.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonStock.Location = new System.Drawing.Point(657, 271);
+            this.buttonStock.Name = "buttonStock";
+            this.buttonStock.Size = new System.Drawing.Size(144, 31);
+            this.buttonStock.TabIndex = 12;
+            this.buttonStock.Text = "Stock";
+            this.buttonStock.UseVisualStyleBackColor = false;
+            this.buttonStock.Click += new System.EventHandler(this.buttonStock_Click);
+            // 
+            // butonAñadirPelis
+            // 
+            this.butonAñadirPelis.BackColor = System.Drawing.Color.Transparent;
+            this.butonAñadirPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butonAñadirPelis.BackgroundImage")));
+            this.butonAñadirPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butonAñadirPelis.ForeColor = System.Drawing.SystemColors.Control;
+            this.butonAñadirPelis.Location = new System.Drawing.Point(508, 271);
+            this.butonAñadirPelis.Name = "butonAñadirPelis";
+            this.butonAñadirPelis.Size = new System.Drawing.Size(143, 31);
+            this.butonAñadirPelis.TabIndex = 13;
+            this.butonAñadirPelis.Text = "Gestión de Pelis";
+            this.butonAñadirPelis.UseVisualStyleBackColor = false;
+            this.butonAñadirPelis.Click += new System.EventHandler(this.butonAñadirPelis_Click);
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.butonAñadirPelis);
+            this.Controls.Add(this.buttonStock);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTabla);
@@ -149,5 +181,7 @@
         private System.Windows.Forms.Label labelTabla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonStock;
+        private System.Windows.Forms.Button butonAñadirPelis;
     }
 }

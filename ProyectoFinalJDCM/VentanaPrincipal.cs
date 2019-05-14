@@ -59,7 +59,19 @@ namespace ProyectoFinalJDCM
             
         }
 
-        
+        private void butonAñadirPelis_Click(object sender, EventArgs e)
+        {
+            //Este botón te lleva a un Form (cuando se cree) donde 
+            //se gestionan las películas
+        }
+
+        private void buttonStock_Click(object sender, EventArgs e)
+        {
+            //Este botón te lleva a un Form (cuando se cree) donde 
+            //se gestionan el alquiler de películas
+        }
+
+
 
         //El siguiente método, establece la conexión y realiza la consulta sobre la BD
         private void hazLaConsulta(String query)    
@@ -78,8 +90,6 @@ namespace ProyectoFinalJDCM
 
 
     }
-
-       
 
         
     }
