@@ -147,6 +147,7 @@
             this.Controls.Add(this.tablaConsultasDG);
             this.Name = "VentanaPrincipal";
             this.Text = "VentanaPrincipal";
+
             ((System.ComponentModel.ISupportInitialize)(this.tablaConsultasDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPB)).EndInit();
             this.ResumeLayout(false);
