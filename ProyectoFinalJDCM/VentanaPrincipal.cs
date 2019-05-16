@@ -39,6 +39,7 @@ namespace ProyectoFinalJDCM
             
             limpiaListaConsultas();
             hazLaConsulta(query);
+            tablaConsultasDG.DataSource = datos;
         }
 
         private void botonDirectores_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace ProyectoFinalJDCM
             
             limpiaListaConsultas();
             hazLaConsulta(query);
+            tablaConsultasDG.DataSource = datos;
         }
 
         
@@ -57,7 +59,8 @@ namespace ProyectoFinalJDCM
      
             limpiaListaConsultas();
             hazLaConsulta(query);
-            
+            tablaConsultasDG.DataSource = datos;
+
         }
 
         private void butonAñadirPelis_Click(object sender, EventArgs e)
@@ -68,21 +71,22 @@ namespace ProyectoFinalJDCM
 
         private void buttonStock_Click(object sender, EventArgs e)
         {
-            //Este botón te lleva a un Form (cuando se cree) donde 
-            //se gestionan el alquiler de películas
+            this.Visible = false;
+            Stock ventanaStock = new Stock();
+            ventanaStock.Visible = true;
         }
 
 
 
         //El siguiente método, establece la conexión y realiza la consulta sobre la BD
-        private void hazLaConsulta(String query)    
+        public void hazLaConsulta(String query)    
         {
             tablaConsultasDG.Visible = true;
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
             MySqlCommand comando = new MySqlCommand(query, conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
             datos.Load(resultado);
-            tablaConsultasDG.DataSource = datos;
+            
 
         }
         //Este método limpia el griefview que muestra las consultas, pero no me termina de gustar así que hay que revisarlo
