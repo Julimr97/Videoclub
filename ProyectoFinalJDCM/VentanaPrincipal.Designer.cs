@@ -51,6 +51,8 @@
             this.dGListaConsultas.ReadOnly = true;
             this.dGListaConsultas.Size = new System.Drawing.Size(490, 348);
             this.dGListaConsultas.TabIndex = 5;
+            this.dGListaConsultas.Visible = false;
+        
             // 
             // botonPeliculas
             // 

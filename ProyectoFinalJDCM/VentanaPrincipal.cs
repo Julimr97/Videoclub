@@ -77,6 +77,7 @@ namespace ProyectoFinalJDCM
         //El siguiente método, establece la conexión y realiza la consulta sobre la BD
         private void hazLaConsulta(String query)    
         {
+            dGListaConsultas.Visible = true;
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
             MySqlCommand comando = new MySqlCommand(query, conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
@@ -92,6 +93,6 @@ namespace ProyectoFinalJDCM
 
     }
 
-        
+       
     }
 }
