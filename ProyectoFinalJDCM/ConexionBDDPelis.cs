@@ -23,7 +23,7 @@ namespace ProyectoFinalJDCM
             MySqlConnection conexion = new MySqlConnection("" +
                 "Server = 127.0.0.1;" +
                 "Database = Videoclub;" +
-                "UID = root1234;" +
+                "UID = root;" +
                 "Pwd = ;" +
                 "Port = 3306;");
             conexion.Open();

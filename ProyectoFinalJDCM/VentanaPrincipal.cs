@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 /*
- * Autor: Daniel Hebrero Núñez, Amo y señor del código
+ * No Autor: German Enrique de la Rosa
  */
 
 namespace ProyectoFinalJDCM
@@ -23,11 +23,12 @@ namespace ProyectoFinalJDCM
             InitializeComponent();
             
         }
-
+        
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             base.OnFormClosed(e);
             Application.Exit();
+            
         }
 
         
@@ -52,7 +53,7 @@ namespace ProyectoFinalJDCM
 
         private void botonPeliculas_Click(object sender, EventArgs e)
         {
-            String query = "SELECT * FROM movies ORDER BY name";
+            String query = "SELECT movies.id, movies.name, movies.year, movies.rank FROM movies ORDER BY name";
             labelTabla.Text = "Mira que de pelis tengo";
             limpiaListaConsultas();
             hazLaConsulta(query);
