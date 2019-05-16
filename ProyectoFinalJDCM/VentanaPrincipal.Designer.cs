@@ -29,30 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipal));
-            this.dGListaConsultas = new System.Windows.Forms.DataGridView();
+            this.tablaConsultasDG = new System.Windows.Forms.DataGridView();
             this.botonPeliculas = new System.Windows.Forms.Button();
             this.botonDirectores = new System.Windows.Forms.Button();
             this.botonActores = new System.Windows.Forms.Button();
-            this.labelTabla = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logoPB = new System.Windows.Forms.PictureBox();
             this.buttonStock = new System.Windows.Forms.Button();
             this.butonAñadirPelis = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaConsultasDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPB)).BeginInit();
             this.SuspendLayout();
             // 
-            // dGListaConsultas
+            // tablaConsultasDG
             // 
-            this.dGListaConsultas.AllowUserToOrderColumns = true;
-            this.dGListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGListaConsultas.Location = new System.Drawing.Point(12, 90);
-            this.dGListaConsultas.Name = "dGListaConsultas";
-            this.dGListaConsultas.ReadOnly = true;
-            this.dGListaConsultas.Size = new System.Drawing.Size(490, 348);
-            this.dGListaConsultas.TabIndex = 5;
-            this.dGListaConsultas.Visible = false;
-        
+            this.tablaConsultasDG.AllowUserToOrderColumns = true;
+            this.tablaConsultasDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaConsultasDG.Location = new System.Drawing.Point(12, 102);
+            this.tablaConsultasDG.Name = "tablaConsultasDG";
+            this.tablaConsultasDG.ReadOnly = true;
+            this.tablaConsultasDG.Size = new System.Drawing.Size(490, 348);
+            this.tablaConsultasDG.TabIndex = 5;
+            this.tablaConsultasDG.Visible = false;
             // 
             // botonPeliculas
             // 
@@ -97,31 +94,15 @@
             this.botonActores.UseVisualStyleBackColor = false;
             this.botonActores.Click += new System.EventHandler(this.botonActores_Click);
             // 
-            // labelTabla
+            // logoPB
             // 
-            this.labelTabla.AutoSize = true;
-            this.labelTabla.Location = new System.Drawing.Point(13, 71);
-            this.labelTabla.Name = "labelTabla";
-            this.labelTabla.Size = new System.Drawing.Size(0, 13);
-            this.labelTabla.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 91);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.logoPB.BackColor = System.Drawing.Color.Transparent;
+            this.logoPB.Image = ((System.Drawing.Image)(resources.GetObject("logoPB.Image")));
+            this.logoPB.Location = new System.Drawing.Point(284, 5);
+            this.logoPB.Name = "logoPB";
+            this.logoPB.Size = new System.Drawing.Size(218, 91);
+            this.logoPB.TabIndex = 11;
+            this.logoPB.TabStop = false;
             // 
             // buttonStock
             // 
@@ -159,30 +140,25 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.butonAñadirPelis);
             this.Controls.Add(this.buttonStock);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelTabla);
+            this.Controls.Add(this.logoPB);
             this.Controls.Add(this.botonActores);
             this.Controls.Add(this.botonDirectores);
             this.Controls.Add(this.botonPeliculas);
-            this.Controls.Add(this.dGListaConsultas);
+            this.Controls.Add(this.tablaConsultasDG);
             this.Name = "VentanaPrincipal";
             this.Text = "VentanaPrincipal";
-            ((System.ComponentModel.ISupportInitialize)(this.dGListaConsultas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaConsultasDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPB)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dGListaConsultas;
+        private System.Windows.Forms.DataGridView tablaConsultasDG;
         private System.Windows.Forms.Button botonPeliculas;
         private System.Windows.Forms.Button botonDirectores;
         private System.Windows.Forms.Button botonActores;
-        private System.Windows.Forms.Label labelTabla;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logoPB;
         private System.Windows.Forms.Button buttonStock;
         private System.Windows.Forms.Button butonAñadirPelis;
     }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 /*
- * No Autor: German Enrique de la Rosa
+ * Autor: Daniel Hebrero, Amo y Señor del código
  */
 
 namespace ProyectoFinalJDCM
@@ -36,7 +36,7 @@ namespace ProyectoFinalJDCM
         private void botonActores_Click(object sender, EventArgs e)
         {
             String query = "SELECT * FROM actors ORDER BY first_name";
-            labelTabla.Text = "Actores que opinan que soy el más guapo";
+            
             limpiaListaConsultas();
             hazLaConsulta(query);
         }
@@ -44,7 +44,7 @@ namespace ProyectoFinalJDCM
         private void botonDirectores_Click(object sender, EventArgs e)
         {
             String query = "SELECT * FROM directors ORDER BY first_name";
-            labelTabla.Text = "Directores de las películas que tengo";
+            
             limpiaListaConsultas();
             hazLaConsulta(query);
         }
@@ -54,7 +54,7 @@ namespace ProyectoFinalJDCM
         private void botonPeliculas_Click(object sender, EventArgs e)
         {
             String query = "SELECT movies.id, movies.name, movies.year, movies.rank FROM movies ORDER BY name";
-            labelTabla.Text = "Mira que de pelis tengo";
+     
             limpiaListaConsultas();
             hazLaConsulta(query);
             
@@ -77,12 +77,12 @@ namespace ProyectoFinalJDCM
         //El siguiente método, establece la conexión y realiza la consulta sobre la BD
         private void hazLaConsulta(String query)    
         {
-            dGListaConsultas.Visible = true;
+            tablaConsultasDG.Visible = true;
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
             MySqlCommand comando = new MySqlCommand(query, conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
             datos.Load(resultado);
-            dGListaConsultas.DataSource = datos;
+            tablaConsultasDG.DataSource = datos;
 
         }
         //Este método limpia el griefview que muestra las consultas, pero no me termina de gustar así que hay que revisarlo
@@ -92,6 +92,8 @@ namespace ProyectoFinalJDCM
 
 
     }
+
+      
 
        
     }
