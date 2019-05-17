@@ -87,6 +87,7 @@ namespace ProyectoFinalJDCM
             MySqlDataReader resultado = comando.ExecuteReader();
             datos.Load(resultado);
             
+            
 
         }
         //Este método limpia el griefview que muestra las consultas, pero no me termina de gustar así que hay que revisarlo
