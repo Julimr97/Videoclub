@@ -19,6 +19,7 @@ namespace ProyectoFinalJDCM
         {
             InitializeComponent();
             rellenaComboPeliculas();
+           
 
         }
 
@@ -50,7 +51,7 @@ namespace ProyectoFinalJDCM
 
         private void AlquilarBoton_Click(object sender, EventArgs e)
         {
-
+            
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
 
             MySqlCommand comando = new MySqlCommand("" +
@@ -61,13 +62,18 @@ namespace ProyectoFinalJDCM
 
             if (resultado.Read())
              {
+                conexion.Close();
+                conexion = new ConexionBDDPelis().conecta();
+                MySqlCommand comando1 = new MySqlCommand("" +
+                    "INSERT INTO `prestamos` (`id_prestamo`, `id_usuario`, `id_pelicula`, `fecha_prestamo`, `fecha_devolucion`) VALUES (NULL, '" + dniTB.Text +"', '" + id_pelicula +"', '2019-05-20', '2019-05-23');",conexion);
 
-                    MySqlCommand comando1 = new MySqlCommand("" +
-                    "INSERT INTO PRESTAMOS (id_usuario, id_pelicula, fecha_prestamo, fecha_devolucion) VALUES(" +
-                     dniTB.Text + ","+ int.Parse(id_pelicula) + "," + "17-05-2019," + "20-01-2028" + ");",
-                     conexion);
+                MySqlDataReader resutado = comando1.ExecuteReader();
+                MessageBox.Show("Película alquilada", "YEAH BABY");
             }
-
+            else
+            {
+                MessageBox.Show("Cliente no identificado", "Registre al cliente");
+            }
 
             
             
