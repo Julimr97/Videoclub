@@ -61,6 +61,7 @@ namespace ProyectoFinalJDCM
             MySqlDataReader resultado = comando.ExecuteReader();
 
             if (resultado.Read())
+
              {
                 
                 conexion.Close();
