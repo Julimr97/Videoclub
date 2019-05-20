@@ -14,7 +14,7 @@ namespace ProyectoFinalJDCM
 {
     public partial class Stock : Form
     {
-        String id_pelicula;
+        String id_pelicula ="";
         public Stock()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace ProyectoFinalJDCM
                 String name = resultado.GetString("name");
                 id_pelicula = resultado.GetString("id");
 
-                peliculasCB.Items.Add(name);
+                peliculasCB.Items.Add(id_pelicula + " | " + name);
             }
             conexion.Close();
         }
@@ -62,12 +62,17 @@ namespace ProyectoFinalJDCM
 
             if (resultado.Read())
              {
+                
                 conexion.Close();
                 conexion = new ConexionBDDPelis().conecta();
-                MySqlCommand comando1 = new MySqlCommand("" +
+                cogeId();
+                MySqlCommand insertaPrestamo = new MySqlCommand("" +
                     "INSERT INTO `prestamos` (`id_prestamo`, `id_usuario`, `id_pelicula`, `fecha_prestamo`, `fecha_devolucion`) VALUES (NULL, '" + dniTB.Text +"', '" + id_pelicula +"', '2019-05-20', '2019-05-23');",conexion);
 
-                MySqlDataReader resutado = comando1.ExecuteReader();
+                MySqlDataReader resutado = insertaPrestamo.ExecuteReader();
+
+                
+
                 MessageBox.Show("Película alquilada", "YEAH BABY");
             }
             else
@@ -77,6 +82,25 @@ namespace ProyectoFinalJDCM
 
             
             
+        }
+
+        private void cogeId()
+        {
+            String index = peliculasCB.Text.ToString();
+            String indice = "";
+
+            for (int i = 0; i< index.Length; i++)
+            {
+                if(index[i] != ' ')
+                {
+                    indice = index.Substring(0, i + 1);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            id_pelicula = indice;
         }
     }
 }
