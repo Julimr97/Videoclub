@@ -35,7 +35,7 @@
             this.botonActores = new System.Windows.Forms.Button();
             this.logoPB = new System.Windows.Forms.PictureBox();
             this.buttonStock = new System.Windows.Forms.Button();
-            this.butonAñadirPelis = new System.Windows.Forms.Button();
+            this.butonGestorUsuarios = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaConsultasDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPB)).BeginInit();
             this.SuspendLayout();
@@ -110,35 +110,36 @@
             this.buttonStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStock.BackgroundImage")));
             this.buttonStock.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStock.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonStock.Location = new System.Drawing.Point(657, 271);
+            this.buttonStock.Location = new System.Drawing.Point(659, 307);
             this.buttonStock.Name = "buttonStock";
-            this.buttonStock.Size = new System.Drawing.Size(144, 31);
+            this.buttonStock.Size = new System.Drawing.Size(103, 61);
             this.buttonStock.TabIndex = 12;
             this.buttonStock.Text = "Stock";
             this.buttonStock.UseVisualStyleBackColor = false;
             this.buttonStock.Click += new System.EventHandler(this.buttonStock_Click);
             // 
-            // butonAñadirPelis
+            // butonGestorUsuarios
             // 
-            this.butonAñadirPelis.BackColor = System.Drawing.Color.Transparent;
-            this.butonAñadirPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butonAñadirPelis.BackgroundImage")));
-            this.butonAñadirPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butonAñadirPelis.ForeColor = System.Drawing.SystemColors.Control;
-            this.butonAñadirPelis.Location = new System.Drawing.Point(508, 271);
-            this.butonAñadirPelis.Name = "butonAñadirPelis";
-            this.butonAñadirPelis.Size = new System.Drawing.Size(143, 31);
-            this.butonAñadirPelis.TabIndex = 13;
-            this.butonAñadirPelis.Text = "Gestión de Pelis";
-            this.butonAñadirPelis.UseVisualStyleBackColor = false;
-            this.butonAñadirPelis.Click += new System.EventHandler(this.butonAñadirPelis_Click);
+            this.butonGestorUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.butonGestorUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butonGestorUsuarios.BackgroundImage")));
+            this.butonGestorUsuarios.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butonGestorUsuarios.ForeColor = System.Drawing.SystemColors.Control;
+            this.butonGestorUsuarios.Location = new System.Drawing.Point(537, 307);
+            this.butonGestorUsuarios.Name = "butonGestorUsuarios";
+            this.butonGestorUsuarios.Size = new System.Drawing.Size(103, 61);
+            this.butonGestorUsuarios.TabIndex = 13;
+            this.butonGestorUsuarios.Text = "Gestión de Usuarios";
+            this.butonGestorUsuarios.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.butonGestorUsuarios.UseVisualStyleBackColor = false;
+            this.butonGestorUsuarios.Click += new System.EventHandler(this.butonGestorUsuarios_Click);
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.butonAñadirPelis);
+            this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.butonGestorUsuarios);
             this.Controls.Add(this.buttonStock);
             this.Controls.Add(this.logoPB);
             this.Controls.Add(this.botonActores);
@@ -160,6 +161,6 @@
         private System.Windows.Forms.Button botonActores;
         private System.Windows.Forms.PictureBox logoPB;
         private System.Windows.Forms.Button buttonStock;
-        private System.Windows.Forms.Button butonAñadirPelis;
+        private System.Windows.Forms.Button butonGestorUsuarios;
     }
 }
