@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaDeUsuarios));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxDNI = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelDNI = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxPSW = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelApellidos = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
@@ -44,26 +44,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxDNI
             // 
-            this.textBox1.Location = new System.Drawing.Point(483, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxDNI.Location = new System.Drawing.Point(483, 201);
+            this.textBoxDNI.Name = "textBoxDNI";
+            this.textBoxDNI.Size = new System.Drawing.Size(225, 20);
+            this.textBoxDNI.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(483, 227);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxNombre.Location = new System.Drawing.Point(483, 227);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(225, 20);
+            this.textBoxNombre.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxApellidos
             // 
-            this.textBox3.Location = new System.Drawing.Point(483, 253);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxApellidos.Location = new System.Drawing.Point(483, 253);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(225, 20);
+            this.textBoxApellidos.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -84,19 +84,19 @@
             this.labelDNI.TabIndex = 4;
             this.labelDNI.Text = "DNI";
             // 
-            // textBox4
+            // textBoxEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(483, 280);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.textBoxEmail.Location = new System.Drawing.Point(483, 280);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(225, 20);
+            this.textBoxEmail.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxPSW
             // 
-            this.textBox5.Location = new System.Drawing.Point(483, 307);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
+            this.textBoxPSW.Location = new System.Drawing.Point(483, 307);
+            this.textBoxPSW.Name = "textBoxPSW";
+            this.textBoxPSW.Size = new System.Drawing.Size(225, 20);
+            this.textBoxPSW.TabIndex = 6;
             // 
             // labelNombre
             // 
@@ -136,14 +136,15 @@
             // 
             // buttonRegistrar
             // 
-            this.buttonRegistrar.Location = new System.Drawing.Point(413, 353);
+            this.buttonRegistrar.Location = new System.Drawing.Point(538, 353);
             this.buttonRegistrar.Name = "buttonRegistrar";
             this.buttonRegistrar.Size = new System.Drawing.Size(170, 23);
             this.buttonRegistrar.TabIndex = 11;
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = true;
+            this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click);
             // 
-            // GestorDeUsuarios
+            // VentanaDeUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,14 +155,14 @@
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.labelApellidos);
             this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxPSW);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "GestorDeUsuarios";
+            this.Controls.Add(this.textBoxApellidos);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.textBoxDNI);
+            this.Name = "VentanaDeUsuarios";
             this.Text = "GestorDeUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -171,13 +172,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxDNI;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelDNI;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxPSW;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelApellidos;
         private System.Windows.Forms.Label labelEmail;
