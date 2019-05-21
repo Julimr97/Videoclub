@@ -23,9 +23,24 @@ namespace ProyectoFinalJDCM
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
 
             MySqlCommand comando = new MySqlCommand("Insert into usuario (dni, nombre, apellido, email, password)" +
-                "values ('"+ textBoxDNI +"', '"+ textBoxNombre + "', '" + textBoxApellidos + "', '" + textBoxEmail + "', '" + textBoxPSW + "');", conexion);
+                "values ('"+ textBoxDNI.Text +"', '"+ textBoxNombre.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxEmail.Text + "', '" + textBoxPSW.Text + "');", conexion);
 
             MySqlDataReader resultado = comando.ExecuteReader();
         }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+            Application.Exit();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+            ventanaPrincipal.Visible = true;
+        }
     }
+
 }
