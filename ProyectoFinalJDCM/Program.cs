@@ -16,7 +16,7 @@ namespace ProyectoFinalJDCM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Stock());
+            Application.Run(new Login());
         }
     }
 }

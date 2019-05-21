@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 /*
- * Autor: Daniel Hebrero, Amo y Señor del código
+ * Pesado: Daniel Hebrero, Ego del código
  */
 
 namespace ProyectoFinalJDCM
@@ -84,11 +84,9 @@ namespace ProyectoFinalJDCM
 
         }
         //Este método limpia el griefview que muestra las consultas, pero no me termina de gustar así que hay que revisarlo
-        private void limpiaListaConsultas()
+        public void limpiaListaConsultas()
         {
              datos = new DataTable();
-
-
     }
 
         private void butonGestorUsuarios_Click(object sender, EventArgs e)
