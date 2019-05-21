@@ -41,37 +41,40 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelPSW = new System.Windows.Forms.Label();
             this.buttonRegistrar = new System.Windows.Forms.Button();
+            this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
+            this.buttonmostrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(483, 201);
+            this.textBoxDNI.Location = new System.Drawing.Point(562, 141);
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(225, 20);
+            this.textBoxDNI.Size = new System.Drawing.Size(189, 20);
             this.textBoxDNI.TabIndex = 0;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(483, 227);
+            this.textBoxNombre.Location = new System.Drawing.Point(562, 167);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(225, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(189, 20);
             this.textBoxNombre.TabIndex = 1;
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(483, 253);
+            this.textBoxApellidos.Location = new System.Drawing.Point(562, 193);
             this.textBoxApellidos.Name = "textBoxApellidos";
-            this.textBoxApellidos.Size = new System.Drawing.Size(225, 20);
+            this.textBoxApellidos.Size = new System.Drawing.Size(189, 20);
             this.textBoxApellidos.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 99);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -79,71 +82,110 @@
             // labelDNI
             // 
             this.labelDNI.AutoSize = true;
-            this.labelDNI.Location = new System.Drawing.Point(410, 201);
+            this.labelDNI.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDNI.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelDNI.Image = ((System.Drawing.Image)(resources.GetObject("labelDNI.Image")));
+            this.labelDNI.Location = new System.Drawing.Point(474, 141);
             this.labelDNI.Name = "labelDNI";
-            this.labelDNI.Size = new System.Drawing.Size(26, 13);
+            this.labelDNI.Size = new System.Drawing.Size(38, 20);
             this.labelDNI.TabIndex = 4;
-            this.labelDNI.Text = "DNI";
+            this.labelDNI.Text = "DNI :";
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(483, 280);
+            this.textBoxEmail.Location = new System.Drawing.Point(562, 220);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(225, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(189, 20);
             this.textBoxEmail.TabIndex = 5;
             // 
             // textBoxPSW
             // 
-            this.textBoxPSW.Location = new System.Drawing.Point(483, 307);
+            this.textBoxPSW.Location = new System.Drawing.Point(562, 247);
             this.textBoxPSW.Name = "textBoxPSW";
-            this.textBoxPSW.Size = new System.Drawing.Size(225, 20);
+            this.textBoxPSW.Size = new System.Drawing.Size(189, 20);
             this.textBoxPSW.TabIndex = 6;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(410, 227);
+            this.labelNombre.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelNombre.Image = ((System.Drawing.Image)(resources.GetObject("labelNombre.Image")));
+            this.labelNombre.Location = new System.Drawing.Point(474, 167);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(44, 13);
+            this.labelNombre.Size = new System.Drawing.Size(66, 20);
             this.labelNombre.TabIndex = 7;
-            this.labelNombre.Text = "Nombre";
+            this.labelNombre.Text = "Nombre :";
             // 
             // labelApellidos
             // 
             this.labelApellidos.AutoSize = true;
-            this.labelApellidos.Location = new System.Drawing.Point(413, 253);
+            this.labelApellidos.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidos.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelApellidos.Image = ((System.Drawing.Image)(resources.GetObject("labelApellidos.Image")));
+            this.labelApellidos.Location = new System.Drawing.Point(477, 193);
             this.labelApellidos.Name = "labelApellidos";
-            this.labelApellidos.Size = new System.Drawing.Size(49, 13);
+            this.labelApellidos.Size = new System.Drawing.Size(74, 20);
             this.labelApellidos.TabIndex = 8;
-            this.labelApellidos.Text = "Apellidos";
+            this.labelApellidos.Text = "Apellidos :";
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(413, 280);
+            this.labelEmail.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelEmail.Image = ((System.Drawing.Image)(resources.GetObject("labelEmail.Image")));
+            this.labelEmail.Location = new System.Drawing.Point(477, 220);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(32, 13);
+            this.labelEmail.Size = new System.Drawing.Size(50, 20);
             this.labelEmail.TabIndex = 9;
-            this.labelEmail.Text = "Email";
+            this.labelEmail.Text = "Email :";
             // 
             // labelPSW
             // 
             this.labelPSW.AutoSize = true;
-            this.labelPSW.Location = new System.Drawing.Point(413, 307);
+            this.labelPSW.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPSW.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelPSW.Image = ((System.Drawing.Image)(resources.GetObject("labelPSW.Image")));
+            this.labelPSW.Location = new System.Drawing.Point(477, 247);
             this.labelPSW.Name = "labelPSW";
-            this.labelPSW.Size = new System.Drawing.Size(53, 13);
+            this.labelPSW.Size = new System.Drawing.Size(79, 20);
             this.labelPSW.TabIndex = 10;
-            this.labelPSW.Text = "Password";
+            this.labelPSW.Text = "Password :";
             // 
             // buttonRegistrar
             // 
-            this.buttonRegistrar.Location = new System.Drawing.Point(538, 353);
+            this.buttonRegistrar.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonRegistrar.Image")));
+            this.buttonRegistrar.Location = new System.Drawing.Point(656, 311);
             this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(170, 23);
+            this.buttonRegistrar.Size = new System.Drawing.Size(95, 60);
             this.buttonRegistrar.TabIndex = 11;
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = true;
             this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click);
+            // 
+            // dataGridViewUsuarios
+            // 
+            this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(12, 126);
+            this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(446, 326);
+            this.dataGridViewUsuarios.TabIndex = 12;
+            // 
+            // buttonmostrar
+            // 
+            this.buttonmostrar.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonmostrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonmostrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonmostrar.Image")));
+            this.buttonmostrar.Location = new System.Drawing.Point(497, 311);
+            this.buttonmostrar.Name = "buttonmostrar";
+            this.buttonmostrar.Size = new System.Drawing.Size(95, 60);
+            this.buttonmostrar.TabIndex = 13;
+            this.buttonmostrar.Text = "Mostrar Usuarios";
+            this.buttonmostrar.UseVisualStyleBackColor = true;
+            this.buttonmostrar.Click += new System.EventHandler(this.buttonmostrar_Click);
             // 
             // VentanaDeUsuarios
             // 
@@ -151,6 +193,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.buttonmostrar);
+            this.Controls.Add(this.dataGridViewUsuarios);
             this.Controls.Add(this.buttonRegistrar);
             this.Controls.Add(this.labelPSW);
             this.Controls.Add(this.labelEmail);
@@ -166,6 +210,7 @@
             this.Name = "VentanaDeUsuarios";
             this.Text = "GestorDeUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +230,7 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelPSW;
         private System.Windows.Forms.Button buttonRegistrar;
+        private System.Windows.Forms.DataGridView dataGridViewUsuarios;
+        private System.Windows.Forms.Button buttonmostrar;
     }
 }
