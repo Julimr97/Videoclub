@@ -32,6 +32,8 @@
             this.peliculasCB = new System.Windows.Forms.ComboBox();
             this.AlquilarBoton = new System.Windows.Forms.Button();
             this.DevolverBoton = new System.Windows.Forms.Button();
+            this.fechaHoyDTP = new System.Windows.Forms.DateTimePicker();
+            this.fechaDevolucionDTP = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // dniTB
@@ -69,11 +71,29 @@
             this.DevolverBoton.UseVisualStyleBackColor = true;
             this.DevolverBoton.Click += new System.EventHandler(this.button2_Click);
             // 
+            // fechaHoyDTP
+            // 
+            this.fechaHoyDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaHoyDTP.Location = new System.Drawing.Point(511, 102);
+            this.fechaHoyDTP.Name = "fechaHoyDTP";
+            this.fechaHoyDTP.Size = new System.Drawing.Size(232, 20);
+            this.fechaHoyDTP.TabIndex = 4;
+            // 
+            // fechaDevolucionDTP
+            // 
+            this.fechaDevolucionDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaDevolucionDTP.Location = new System.Drawing.Point(511, 128);
+            this.fechaDevolucionDTP.Name = "fechaDevolucionDTP";
+            this.fechaDevolucionDTP.Size = new System.Drawing.Size(232, 20);
+            this.fechaDevolucionDTP.TabIndex = 5;
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fechaDevolucionDTP);
+            this.Controls.Add(this.fechaHoyDTP);
             this.Controls.Add(this.DevolverBoton);
             this.Controls.Add(this.AlquilarBoton);
             this.Controls.Add(this.peliculasCB);
@@ -92,5 +112,7 @@
         private System.Windows.Forms.ComboBox peliculasCB;
         private System.Windows.Forms.Button AlquilarBoton;
         private System.Windows.Forms.Button DevolverBoton;
+        private System.Windows.Forms.DateTimePicker fechaHoyDTP;
+        private System.Windows.Forms.DateTimePicker fechaDevolucionDTP;
     }
 }

@@ -18,6 +18,13 @@ namespace ProyectoFinalJDCM
         public Stock()
         {
             InitializeComponent();
+
+            fechaHoyDTP.Format = DateTimePickerFormat.Custom;
+            fechaHoyDTP.CustomFormat = "yyyy-MM-dd";
+
+            fechaDevolucionDTP.Format = DateTimePickerFormat.Custom;
+            fechaDevolucionDTP.CustomFormat = "yyyy-MM-dd";
+
             rellenaComboPeliculas();
            
 
@@ -60,6 +67,8 @@ namespace ProyectoFinalJDCM
 
             MySqlDataReader resultado = comando.ExecuteReader();
 
+
+
             if (resultado.Read())
 
              {
@@ -68,7 +77,7 @@ namespace ProyectoFinalJDCM
                 conexion = new ConexionBDDPelis().conecta();
                 cogeId();
                 MySqlCommand insertaPrestamo = new MySqlCommand("" +
-                    "INSERT INTO `prestamos` (`id_prestamo`, `id_usuario`, `id_pelicula`, `fecha_prestamo`, `fecha_devolucion`) VALUES (NULL, '" + dniTB.Text +"', '" + id_pelicula +"', '2019-05-20', '2019-05-23');",conexion);
+                    "INSERT INTO `prestamos` (`id_prestamo`, `id_usuario`, `id_pelicula`, `fecha_prestamo`, `fecha_devolucion`) VALUES (NULL, '" + dniTB.Text +"', '" + id_pelicula +"','" + fechaHoyDTP.Text + "', '"+ fechaDevolucionDTP.Text +"');",conexion);
 
                 MySqlDataReader resutado = insertaPrestamo.ExecuteReader();
 
