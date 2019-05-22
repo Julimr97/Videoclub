@@ -78,7 +78,7 @@
             this.DevolverBoton.TabIndex = 3;
             this.DevolverBoton.Text = "Devolver";
             this.DevolverBoton.UseVisualStyleBackColor = true;
-            this.DevolverBoton.Click += new System.EventHandler(this.button2_Click);
+
             // 
             // fechaHoyDTP
             // 
@@ -122,7 +122,6 @@
             this.Controls.Add(this.dniTB);
             this.Name = "Stock";
             this.Text = "Stock";
-            this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

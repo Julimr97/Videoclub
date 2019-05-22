@@ -28,6 +28,7 @@ namespace ProyectoFinalJDCM
                 "values ('"+ textBoxDNI.Text +"', '"+ textBoxNombre.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxEmail.Text + "', '" + textBoxPSW.Text + "');", conexion);
 
             MySqlDataReader resultado = comando.ExecuteReader();
+            MessageBox.Show("Cliente con DNI " + textBoxDNI.Text +" registrado correctamente", "Usuario registrado");
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)

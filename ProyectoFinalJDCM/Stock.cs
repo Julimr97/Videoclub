@@ -30,15 +30,7 @@ namespace ProyectoFinalJDCM
 
         }
 
-        private void Stock_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         private void rellenaComboPeliculas()
         {
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
@@ -119,5 +111,6 @@ namespace ProyectoFinalJDCM
             VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
             ventanaPrincipal.Visible = true;
         }
+
     }
 }
