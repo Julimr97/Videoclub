@@ -32,7 +32,7 @@
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.labelDNI = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPSW = new System.Windows.Forms.TextBox();
@@ -41,10 +41,10 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelPSW = new System.Windows.Forms.Label();
             this.buttonRegistrar = new System.Windows.Forms.Button();
-            this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
+            this.tablaUsuarios = new System.Windows.Forms.DataGridView();
             this.buttonmostrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxDNI
@@ -68,16 +68,16 @@
             this.textBoxApellidos.Size = new System.Drawing.Size(189, 20);
             this.textBoxApellidos.TabIndex = 2;
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 99);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(24, 12);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(226, 99);
+            this.logo.TabIndex = 3;
+            this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
             // labelDNI
             // 
@@ -166,13 +166,14 @@
             this.buttonRegistrar.UseVisualStyleBackColor = true;
             this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click);
             // 
-            // dataGridViewUsuarios
+            // tablaUsuarios
             // 
-            this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(12, 126);
-            this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(446, 326);
-            this.dataGridViewUsuarios.TabIndex = 12;
+            this.tablaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaUsuarios.Location = new System.Drawing.Point(12, 126);
+            this.tablaUsuarios.Name = "tablaUsuarios";
+            this.tablaUsuarios.Size = new System.Drawing.Size(446, 326);
+            this.tablaUsuarios.TabIndex = 12;
+            this.tablaUsuarios.Visible = false;
             // 
             // buttonmostrar
             // 
@@ -194,7 +195,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 464);
             this.Controls.Add(this.buttonmostrar);
-            this.Controls.Add(this.dataGridViewUsuarios);
+            this.Controls.Add(this.tablaUsuarios);
             this.Controls.Add(this.buttonRegistrar);
             this.Controls.Add(this.labelPSW);
             this.Controls.Add(this.labelEmail);
@@ -203,14 +204,14 @@
             this.Controls.Add(this.textBoxPSW);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelDNI);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.textBoxDNI);
             this.Name = "VentanaDeUsuarios";
             this.Text = "GestorDeUsuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +222,7 @@
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxApellidos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label labelDNI;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPSW;
@@ -230,7 +231,7 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelPSW;
         private System.Windows.Forms.Button buttonRegistrar;
-        private System.Windows.Forms.DataGridView dataGridViewUsuarios;
+        private System.Windows.Forms.DataGridView tablaUsuarios;
         private System.Windows.Forms.Button buttonmostrar;
     }
 }

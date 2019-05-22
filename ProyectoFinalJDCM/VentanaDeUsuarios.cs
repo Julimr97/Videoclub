@@ -37,7 +37,7 @@ namespace ProyectoFinalJDCM
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void logo_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
@@ -47,7 +47,7 @@ namespace ProyectoFinalJDCM
         //El siguiente método, establece la conexión y realiza la consulta sobre la BD
         public void hazLaConsulta(String query)
         {
-            buttonmostrar.Visible = true;
+            tablaUsuarios.Visible = true;
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
             MySqlCommand comando = new MySqlCommand(query, conexion);
             MySqlDataReader resultado = comando.ExecuteReader();
@@ -68,7 +68,7 @@ namespace ProyectoFinalJDCM
 
             limpiaListaConsultas();
             hazLaConsulta(query);
-            dataGridViewUsuarios.DataSource = datos;
+            tablaUsuarios.DataSource = datos;
         }
     }
 

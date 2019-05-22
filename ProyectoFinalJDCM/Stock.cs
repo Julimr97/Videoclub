@@ -112,5 +112,12 @@ namespace ProyectoFinalJDCM
             }
             id_pelicula = indice;
         }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+            ventanaPrincipal.Visible = true;
+        }
     }
 }
