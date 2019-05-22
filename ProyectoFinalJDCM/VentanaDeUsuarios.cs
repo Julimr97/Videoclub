@@ -28,7 +28,6 @@ namespace ProyectoFinalJDCM
                 "values ('"+ textBoxDNI.Text +"', '"+ textBoxNombre.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxEmail.Text + "', '" + textBoxPSW.Text + "');", conexion);
 
             MySqlDataReader resultado = comando.ExecuteReader();
-            MessageBox.Show("El cliente ha sido registrado correctamente", "BIENVENIDO");
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)
