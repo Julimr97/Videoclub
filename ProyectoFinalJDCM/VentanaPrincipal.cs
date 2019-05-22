@@ -95,5 +95,12 @@ namespace ProyectoFinalJDCM
             VentanaDeUsuarios ventanaDeUsuarios = new VentanaDeUsuarios();
             ventanaDeUsuarios.Visible = true;
         }
+
+        private void buttonGestionPelis_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            VentanaGestionPeliculas ventanaGestionPeliculas = new VentanaGestionPeliculas();
+            ventanaGestionPeliculas.Visible = true;
+        }
     }
 }
