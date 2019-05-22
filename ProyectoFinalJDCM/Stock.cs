@@ -54,8 +54,8 @@ namespace ProyectoFinalJDCM
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
 
             MySqlCommand comando = new MySqlCommand("" +
-                "SELECT * FROM usuario WHERE" +
-                " DNI = '" + dniTB.Text + "';", conexion);
+                "SELECT * FROM usuario, movies WHERE" +
+                " DNI = '" + dniTB.Text + " and stock > 0';", conexion);
 
             MySqlDataReader resultado = comando.ExecuteReader();
 
@@ -70,8 +70,13 @@ namespace ProyectoFinalJDCM
                 cogeId();
                 MySqlCommand insertaPrestamo = new MySqlCommand("" +
                     "INSERT INTO `prestamos` (`id_prestamo`, `id_usuario`, `id_pelicula`, `fecha_prestamo`, `fecha_devolucion`) VALUES (NULL, '" + dniTB.Text +"', '" + id_pelicula +"','" + fechaHoyDTP.Text + "', '"+ fechaDevolucionDTP.Text +"');",conexion);
-
                 MySqlDataReader resutado = insertaPrestamo.ExecuteReader();
+                conexion.Close();
+                conexion = new ConexionBDDPelis().conecta();
+                MySqlCommand modificaStock = new MySqlCommand("UPDATE  movies set stock = stock -1 where " + id_pelicula + "= id", conexion);
+                MySqlDataReader resultadoStock = modificaStock.ExecuteReader();
+                
+                
 
                 
 
