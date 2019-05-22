@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaGestionPeliculas));
             this.tablaPeliculas = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.buttonRegistrarPelis = new System.Windows.Forms.Button();
             this.buttonMostrarPelis = new System.Windows.Forms.Button();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -37,13 +38,13 @@
             this.textBoxYear = new System.Windows.Forms.TextBox();
             this.textBoxRank = new System.Windows.Forms.TextBox();
             this.textBoxStock = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelAnnio = new System.Windows.Forms.Label();
+            this.labelRank = new System.Windows.Forms.Label();
+            this.labelStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPeliculas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaPeliculas
@@ -53,20 +54,27 @@
             this.tablaPeliculas.Name = "tablaPeliculas";
             this.tablaPeliculas.Size = new System.Drawing.Size(371, 280);
             this.tablaPeliculas.TabIndex = 0;
+            this.tablaPeliculas.Visible = false;
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(24, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(24, 13);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(233, 98);
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
             // buttonRegistrarPelis
             // 
-            this.buttonRegistrarPelis.Location = new System.Drawing.Point(599, 329);
+            this.buttonRegistrarPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonRegistrarPelis.BackgroundImage")));
+            this.buttonRegistrarPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistrarPelis.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonRegistrarPelis.Location = new System.Drawing.Point(599, 293);
             this.buttonRegistrarPelis.Name = "buttonRegistrarPelis";
-            this.buttonRegistrarPelis.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegistrarPelis.Size = new System.Drawing.Size(100, 30);
             this.buttonRegistrarPelis.TabIndex = 2;
             this.buttonRegistrarPelis.Text = "Registrar";
             this.buttonRegistrarPelis.UseVisualStyleBackColor = true;
@@ -74,9 +82,12 @@
             // 
             // buttonMostrarPelis
             // 
-            this.buttonMostrarPelis.Location = new System.Drawing.Point(599, 373);
+            this.buttonMostrarPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMostrarPelis.BackgroundImage")));
+            this.buttonMostrarPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMostrarPelis.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMostrarPelis.Location = new System.Drawing.Point(599, 342);
             this.buttonMostrarPelis.Name = "buttonMostrarPelis";
-            this.buttonMostrarPelis.Size = new System.Drawing.Size(75, 44);
+            this.buttonMostrarPelis.Size = new System.Drawing.Size(100, 61);
             this.buttonMostrarPelis.TabIndex = 3;
             this.buttonMostrarPelis.Text = "Mostar Peliculas";
             this.buttonMostrarPelis.UseVisualStyleBackColor = true;
@@ -117,61 +128,77 @@
             this.textBoxStock.Size = new System.Drawing.Size(100, 20);
             this.textBoxStock.TabIndex = 8;
             // 
-            // label1
+            // labelID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(514, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "ID";
+            this.labelID.AutoSize = true;
+            this.labelID.BackColor = System.Drawing.Color.Transparent;
+            this.labelID.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelID.Location = new System.Drawing.Point(530, 117);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(29, 20);
+            this.labelID.TabIndex = 9;
+            this.labelID.Text = "ID :";
             // 
-            // label2
+            // labelNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(514, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Nombre";
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombre.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelNombre.Location = new System.Drawing.Point(530, 143);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(66, 20);
+            this.labelNombre.TabIndex = 10;
+            this.labelNombre.Text = "Nombre :";
             // 
-            // label3
+            // labelAnnio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(514, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Año";
+            this.labelAnnio.AutoSize = true;
+            this.labelAnnio.BackColor = System.Drawing.Color.Transparent;
+            this.labelAnnio.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnnio.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAnnio.Location = new System.Drawing.Point(530, 169);
+            this.labelAnnio.Name = "labelAnnio";
+            this.labelAnnio.Size = new System.Drawing.Size(38, 20);
+            this.labelAnnio.TabIndex = 11;
+            this.labelAnnio.Text = "Año :";
             // 
-            // label4
+            // labelRank
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(514, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Rank";
+            this.labelRank.AutoSize = true;
+            this.labelRank.BackColor = System.Drawing.Color.Transparent;
+            this.labelRank.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRank.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelRank.Location = new System.Drawing.Point(530, 195);
+            this.labelRank.Name = "labelRank";
+            this.labelRank.Size = new System.Drawing.Size(48, 20);
+            this.labelRank.TabIndex = 12;
+            this.labelRank.Text = "Rank :";
             // 
-            // label5
+            // labelStock
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(514, 221);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Stock";
+            this.labelStock.AutoSize = true;
+            this.labelStock.BackColor = System.Drawing.Color.Transparent;
+            this.labelStock.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelStock.Location = new System.Drawing.Point(530, 221);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(52, 20);
+            this.labelStock.TabIndex = 13;
+            this.labelStock.Text = "Stock :";
             // 
             // VentanaGestionPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelStock);
+            this.Controls.Add(this.labelRank);
+            this.Controls.Add(this.labelAnnio);
+            this.Controls.Add(this.labelNombre);
+            this.Controls.Add(this.labelID);
             this.Controls.Add(this.textBoxStock);
             this.Controls.Add(this.textBoxRank);
             this.Controls.Add(this.textBoxYear);
@@ -179,12 +206,12 @@
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.buttonMostrarPelis);
             this.Controls.Add(this.buttonRegistrarPelis);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.tablaPeliculas);
             this.Name = "VentanaGestionPeliculas";
             this.Text = "VentanaGestionPeliculas";
             ((System.ComponentModel.ISupportInitialize)(this.tablaPeliculas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +220,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView tablaPeliculas;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button buttonRegistrarPelis;
         private System.Windows.Forms.Button buttonMostrarPelis;
         private System.Windows.Forms.TextBox textBoxID;
@@ -201,10 +228,10 @@
         private System.Windows.Forms.TextBox textBoxYear;
         private System.Windows.Forms.TextBox textBoxRank;
         private System.Windows.Forms.TextBox textBoxStock;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelAnnio;
+        private System.Windows.Forms.Label labelRank;
+        private System.Windows.Forms.Label labelStock;
     }
 }

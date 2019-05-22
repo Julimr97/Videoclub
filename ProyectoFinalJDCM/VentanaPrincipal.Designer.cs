@@ -111,7 +111,7 @@
             this.buttonStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStock.BackgroundImage")));
             this.buttonStock.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStock.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonStock.Location = new System.Drawing.Point(659, 307);
+            this.buttonStock.Location = new System.Drawing.Point(655, 307);
             this.buttonStock.Name = "buttonStock";
             this.buttonStock.Size = new System.Drawing.Size(103, 61);
             this.buttonStock.TabIndex = 12;
@@ -136,7 +136,10 @@
             // 
             // buttonGestionPelis
             // 
-            this.buttonGestionPelis.Location = new System.Drawing.Point(537, 394);
+            this.buttonGestionPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGestionPelis.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonGestionPelis.Image = ((System.Drawing.Image)(resources.GetObject("buttonGestionPelis.Image")));
+            this.buttonGestionPelis.Location = new System.Drawing.Point(537, 374);
             this.buttonGestionPelis.Name = "buttonGestionPelis";
             this.buttonGestionPelis.Size = new System.Drawing.Size(103, 58);
             this.buttonGestionPelis.TabIndex = 14;
