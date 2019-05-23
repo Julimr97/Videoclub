@@ -36,6 +36,8 @@ namespace ProyectoFinalJDCM
 
         }
 
+        private DataTable datos = new DataTable();
+
 
         private void rellenaComboPeliculas()
         {
@@ -167,6 +169,31 @@ namespace ProyectoFinalJDCM
             {
                 MessageBox.Show("Cliente no identificado o codigo de prestamo incorrecto", "Pruebe de nuevo");
             }
+        }
+
+        //El siguiente método, establece la conexión y realiza la consulta sobre la BD
+        public void hazLaConsulta(String query)
+        {
+            tablaPelisAlquiladas.Visible = true;
+            MySqlConnection conexion = new ConexionBDDPelis().conecta();
+            MySqlCommand comando = new MySqlCommand(query, conexion);
+            MySqlDataReader resultado = comando.ExecuteReader();
+            datos.Load(resultado);
+        }
+
+        //Este método limpia el griefview que muestra las consultas, pero no me termina de gustar así que hay que revisarlo
+        public void limpiaListaConsultas()
+        {
+            datos = new DataTable();
+        }
+
+        private void buttonMostrarPelis_Click(object sender, EventArgs e)
+        {
+            String query = "SELECT * FROM prestamos";
+
+            limpiaListaConsultas();
+            hazLaConsulta(query);
+            tablaPelisAlquiladas.DataSource = datos;
         }
     }
 }

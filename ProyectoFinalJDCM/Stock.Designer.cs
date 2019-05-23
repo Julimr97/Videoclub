@@ -37,7 +37,11 @@
             this.fechaDevolucionDTP = new System.Windows.Forms.DateTimePicker();
             this.logo = new System.Windows.Forms.PictureBox();
             this.registroBoton = new System.Windows.Forms.Button();
+            this.prestamosCB = new System.Windows.Forms.TextBox();
+            this.tablaPelisAlquiladas = new System.Windows.Forms.DataGridView();
+            this.buttonMostrarPelis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPelisAlquiladas)).BeginInit();
             this.SuspendLayout();
             // 
             // dniTB
@@ -79,6 +83,7 @@
             this.DevolverBoton.TabIndex = 3;
             this.DevolverBoton.Text = "Devolver";
             this.DevolverBoton.UseVisualStyleBackColor = true;
+            this.DevolverBoton.Click += new System.EventHandler(this.DevolverBoton_Click);
             // 
             // fechaHoyDTP
             // 
@@ -120,12 +125,40 @@
             this.registroBoton.UseVisualStyleBackColor = true;
             this.registroBoton.Click += new System.EventHandler(this.registroBoton_Click);
             // 
+            // prestamosCB
+            // 
+            this.prestamosCB.Location = new System.Drawing.Point(7, 181);
+            this.prestamosCB.Name = "prestamosCB";
+            this.prestamosCB.Size = new System.Drawing.Size(118, 20);
+            this.prestamosCB.TabIndex = 8;
+            // 
+            // tablaPelisAlquiladas
+            // 
+            this.tablaPelisAlquiladas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaPelisAlquiladas.Location = new System.Drawing.Point(162, 273);
+            this.tablaPelisAlquiladas.Name = "tablaPelisAlquiladas";
+            this.tablaPelisAlquiladas.Size = new System.Drawing.Size(576, 173);
+            this.tablaPelisAlquiladas.TabIndex = 9;
+            // 
+            // buttonMostrarPelis
+            // 
+            this.buttonMostrarPelis.Location = new System.Drawing.Point(506, 203);
+            this.buttonMostrarPelis.Name = "buttonMostrarPelis";
+            this.buttonMostrarPelis.Size = new System.Drawing.Size(158, 33);
+            this.buttonMostrarPelis.TabIndex = 10;
+            this.buttonMostrarPelis.Text = "Mostrar Peliculas Alquiladas";
+            this.buttonMostrarPelis.UseVisualStyleBackColor = true;
+            this.buttonMostrarPelis.Click += new System.EventHandler(this.buttonMostrarPelis_Click);
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonMostrarPelis);
+            this.Controls.Add(this.tablaPelisAlquiladas);
+            this.Controls.Add(this.prestamosCB);
             this.Controls.Add(this.registroBoton);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.fechaDevolucionDTP);
@@ -137,6 +170,7 @@
             this.Name = "Stock";
             this.Text = "Stock";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPelisAlquiladas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +186,8 @@
         private System.Windows.Forms.DateTimePicker fechaDevolucionDTP;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button registroBoton;
+        private System.Windows.Forms.TextBox prestamosCB;
+        private System.Windows.Forms.DataGridView tablaPelisAlquiladas;
+        private System.Windows.Forms.Button buttonMostrarPelis;
     }
 }
