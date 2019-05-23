@@ -36,6 +36,7 @@
             this.fechaHoyDTP = new System.Windows.Forms.DateTimePicker();
             this.fechaDevolucionDTP = new System.Windows.Forms.DateTimePicker();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.registroBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +79,6 @@
             this.DevolverBoton.TabIndex = 3;
             this.DevolverBoton.Text = "Devolver";
             this.DevolverBoton.UseVisualStyleBackColor = true;
-
             // 
             // fechaHoyDTP
             // 
@@ -107,12 +107,23 @@
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
+            // registroBoton
+            // 
+            this.registroBoton.Location = new System.Drawing.Point(162, 203);
+            this.registroBoton.Name = "registroBoton";
+            this.registroBoton.Size = new System.Drawing.Size(107, 33);
+            this.registroBoton.TabIndex = 7;
+            this.registroBoton.Text = "Registro";
+            this.registroBoton.UseVisualStyleBackColor = true;
+            this.registroBoton.Click += new System.EventHandler(this.registroBoton_Click);
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.registroBoton);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.fechaDevolucionDTP);
             this.Controls.Add(this.fechaHoyDTP);
@@ -137,5 +148,6 @@
         private System.Windows.Forms.DateTimePicker fechaHoyDTP;
         private System.Windows.Forms.DateTimePicker fechaDevolucionDTP;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Button registroBoton;
     }
 }

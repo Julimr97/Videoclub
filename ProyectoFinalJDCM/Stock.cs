@@ -117,5 +117,11 @@ namespace ProyectoFinalJDCM
             ventanaPrincipal.Visible = true;
         }
 
+        private void registroBoton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            VentanaDeUsuarios ventanaDeUsuarios = new VentanaDeUsuarios();
+            ventanaDeUsuarios.Visible = true;
+        }
     }
 }

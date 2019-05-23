@@ -43,6 +43,7 @@
             this.buttonRegistrar = new System.Windows.Forms.Button();
             this.tablaUsuarios = new System.Windows.Forms.DataGridView();
             this.buttonmostrar = new System.Windows.Forms.Button();
+            this.StockBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -188,12 +189,23 @@
             this.buttonmostrar.UseVisualStyleBackColor = true;
             this.buttonmostrar.Click += new System.EventHandler(this.buttonmostrar_Click);
             // 
+            // StockBoton
+            // 
+            this.StockBoton.Location = new System.Drawing.Point(656, 377);
+            this.StockBoton.Name = "StockBoton";
+            this.StockBoton.Size = new System.Drawing.Size(95, 60);
+            this.StockBoton.TabIndex = 14;
+            this.StockBoton.Text = "Stock";
+            this.StockBoton.UseVisualStyleBackColor = true;
+            this.StockBoton.Click += new System.EventHandler(this.StockBoton_Click);
+            // 
             // VentanaDeUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.StockBoton);
             this.Controls.Add(this.buttonmostrar);
             this.Controls.Add(this.tablaUsuarios);
             this.Controls.Add(this.buttonRegistrar);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Button buttonRegistrar;
         private System.Windows.Forms.DataGridView tablaUsuarios;
         private System.Windows.Forms.Button buttonmostrar;
+        private System.Windows.Forms.Button StockBoton;
     }
 }

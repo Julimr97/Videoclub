@@ -72,6 +72,13 @@ namespace ProyectoFinalJDCM
             hazLaConsulta(query);
             tablaUsuarios.DataSource = datos;
         }
+
+        private void StockBoton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Stock ventanaStock = new Stock();
+            ventanaStock.Visible = true;
+        }
     }
 
 }
