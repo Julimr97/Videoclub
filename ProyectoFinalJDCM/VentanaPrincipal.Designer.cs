@@ -37,6 +37,7 @@
             this.buttonStock = new System.Windows.Forms.Button();
             this.butonGestorUsuarios = new System.Windows.Forms.Button();
             this.buttonGestionPelis = new System.Windows.Forms.Button();
+            this.buttonGestionActores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaConsultasDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPB)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +100,7 @@
             // 
             this.logoPB.BackColor = System.Drawing.Color.Transparent;
             this.logoPB.Image = ((System.Drawing.Image)(resources.GetObject("logoPB.Image")));
-            this.logoPB.Location = new System.Drawing.Point(284, 5);
+            this.logoPB.Location = new System.Drawing.Point(12, 5);
             this.logoPB.Name = "logoPB";
             this.logoPB.Size = new System.Drawing.Size(218, 91);
             this.logoPB.TabIndex = 11;
@@ -147,12 +148,23 @@
             this.buttonGestionPelis.UseVisualStyleBackColor = true;
             this.buttonGestionPelis.Click += new System.EventHandler(this.buttonGestionPelis_Click);
             // 
+            // buttonGestionActores
+            // 
+            this.buttonGestionActores.Location = new System.Drawing.Point(655, 374);
+            this.buttonGestionActores.Name = "buttonGestionActores";
+            this.buttonGestionActores.Size = new System.Drawing.Size(103, 58);
+            this.buttonGestionActores.TabIndex = 15;
+            this.buttonGestionActores.Text = "Gestion de Actores";
+            this.buttonGestionActores.UseVisualStyleBackColor = true;
+            this.buttonGestionActores.Click += new System.EventHandler(this.buttonGestionActores_Click);
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.buttonGestionActores);
             this.Controls.Add(this.buttonGestionPelis);
             this.Controls.Add(this.butonGestorUsuarios);
             this.Controls.Add(this.buttonStock);
@@ -178,5 +190,6 @@
         private System.Windows.Forms.Button buttonStock;
         private System.Windows.Forms.Button butonGestorUsuarios;
         private System.Windows.Forms.Button buttonGestionPelis;
+        private System.Windows.Forms.Button buttonGestionActores;
     }
 }

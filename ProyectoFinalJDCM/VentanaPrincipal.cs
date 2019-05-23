@@ -102,5 +102,12 @@ namespace ProyectoFinalJDCM
             VentanaGestionPeliculas ventanaGestionPeliculas = new VentanaGestionPeliculas();
             ventanaGestionPeliculas.Visible = true;
         }
+
+        private void buttonGestionActores_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            VentanaGestionActores ventanaGestionActores = new VentanaGestionActores();
+            ventanaGestionActores.Visible = true;
+        }
     }
 }
