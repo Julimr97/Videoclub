@@ -16,6 +16,7 @@ namespace ProyectoFinalJDCM
         public VentanaDeUsuarios()
         {
             InitializeComponent();
+
         }
 
         private DataTable datos = new DataTable();
@@ -25,11 +26,11 @@ namespace ProyectoFinalJDCM
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
 
             MySqlCommand comando = new MySqlCommand("Insert into usuario (dni, nombre, apellido, email, password)" +
-                "values ('"+ textBoxDNI.Text +"', '"+ textBoxNombre.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxEmail.Text + "', '" + textBoxPSW.Text + "');", conexion);
+                "values ('" + textBoxDNI.Text + "', '" + textBoxNombre.Text + "', '" + textBoxApellidos.Text + "', '" + textBoxEmail.Text + "', '" + textBoxPSW.Text + "');", conexion);
 
             MySqlDataReader resultado = comando.ExecuteReader();
 
-            MessageBox.Show("Cliente con DNI " + textBoxDNI.Text +" registrado correctamente", "Usuario registrado");
+            MessageBox.Show("Cliente con DNI " + textBoxDNI.Text + " registrado correctamente", "Usuario registrado");
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)
@@ -78,6 +79,22 @@ namespace ProyectoFinalJDCM
             this.Visible = false;
             Stock ventanaStock = new Stock();
             ventanaStock.Visible = true;
+        }
+
+       
+        private void mostrarFotoBoton_Click_1(object sender, EventArgs e)
+        {
+            DNIimagePB.Visible = true;
+
+            try
+            {
+                DNIimagePB.Image = Image.FromFile(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\Resources\imagenes\" + DNIimageTB.Text + ".jpg");
+            }
+            catch
+            {
+                DNIimagePB.Image = Image.FromFile(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\Resources\imagenes\noimage.jpg");
+                MessageBox.Show("ey", "amadeo que te veo");
+            }
         }
     }
 

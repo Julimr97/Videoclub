@@ -29,8 +29,14 @@ namespace ProyectoFinalJDCM
            
 
         }
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+            Application.Exit();
 
-      
+        }
+
+
         private void rellenaComboPeliculas()
         {
             MySqlConnection conexion = new ConexionBDDPelis().conecta();
@@ -122,6 +128,45 @@ namespace ProyectoFinalJDCM
             this.Visible = false;
             VentanaDeUsuarios ventanaDeUsuarios = new VentanaDeUsuarios();
             ventanaDeUsuarios.Visible = true;
+        }
+
+        private void DevolverBoton_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexion = new ConexionBDDPelis().conecta();
+
+            MySqlCommand comando = new MySqlCommand("" +
+                "SELECT * FROM `prestamos` WHERE id_prestamo =" +
+                "" + prestamosCB.Text + "", conexion);
+
+            MySqlDataReader resultado = comando.ExecuteReader();
+
+
+
+            if (resultado.Read())
+
+            {
+
+                conexion.Close();
+
+                conexion = new ConexionBDDPelis().conecta();
+                MySqlCommand modificaStock = new MySqlCommand("UPDATE  movies set stock = stock +1 where " + id_pelicula + "= (SELECT prestamos.id_pelicula FROM prestamos WHERE prestamos.id_prestamo = " + prestamosCB.Text + ")", conexion);
+                MySqlDataReader resultadoStock = modificaStock.ExecuteReader();
+
+                conexion = new ConexionBDDPelis().conecta();
+                cogeId();
+                MySqlCommand devuelvePrestamo = new MySqlCommand("" +
+                    "DELETE FROM `prestamos` WHERE id_prestamo = " + prestamosCB.Text + ";", conexion);
+                MySqlDataReader resutado = devuelvePrestamo.ExecuteReader();
+                conexion.Close();
+
+
+
+                MessageBox.Show("Película devuelta", "YEAH BABY");
+            }
+            else
+            {
+                MessageBox.Show("Cliente no identificado o codigo de prestamo incorrecto", "Pruebe de nuevo");
+            }
         }
     }
 }

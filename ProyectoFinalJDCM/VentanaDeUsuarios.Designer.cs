@@ -33,7 +33,6 @@
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.labelDNI = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPSW = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
@@ -44,8 +43,14 @@
             this.tablaUsuarios = new System.Windows.Forms.DataGridView();
             this.buttonmostrar = new System.Windows.Forms.Button();
             this.StockBoton = new System.Windows.Forms.Button();
+            this.DNIimagePB = new System.Windows.Forms.PictureBox();
+            this.labelDNI = new System.Windows.Forms.Label();
+            this.DNIimagenesLabel = new System.Windows.Forms.Label();
+            this.DNIimageTB = new System.Windows.Forms.TextBox();
+            this.mostrarFotoBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DNIimagePB)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxDNI
@@ -79,18 +84,6 @@
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.logo_Click);
-            // 
-            // labelDNI
-            // 
-            this.labelDNI.AutoSize = true;
-            this.labelDNI.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNI.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelDNI.Image = ((System.Drawing.Image)(resources.GetObject("labelDNI.Image")));
-            this.labelDNI.Location = new System.Drawing.Point(474, 141);
-            this.labelDNI.Name = "labelDNI";
-            this.labelDNI.Size = new System.Drawing.Size(38, 20);
-            this.labelDNI.TabIndex = 4;
-            this.labelDNI.Text = "DNI :";
             // 
             // textBoxEmail
             // 
@@ -202,12 +195,67 @@
             this.StockBoton.UseVisualStyleBackColor = true;
             this.StockBoton.Click += new System.EventHandler(this.StockBoton_Click);
             // 
+            // DNIimagePB
+            // 
+            this.DNIimagePB.Location = new System.Drawing.Point(329, 12);
+            this.DNIimagePB.Name = "DNIimagePB";
+            this.DNIimagePB.Size = new System.Drawing.Size(129, 99);
+            this.DNIimagePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DNIimagePB.TabIndex = 15;
+            this.DNIimagePB.TabStop = false;
+            // 
+            // labelDNI
+            // 
+            this.labelDNI.AutoSize = true;
+            this.labelDNI.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDNI.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelDNI.Image = ((System.Drawing.Image)(resources.GetObject("labelDNI.Image")));
+            this.labelDNI.Location = new System.Drawing.Point(474, 141);
+            this.labelDNI.Name = "labelDNI";
+            this.labelDNI.Size = new System.Drawing.Size(38, 20);
+            this.labelDNI.TabIndex = 4;
+            this.labelDNI.Text = "DNI :";
+            // 
+            // DNIimagenesLabel
+            // 
+            this.DNIimagenesLabel.AutoSize = true;
+            this.DNIimagenesLabel.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNIimagenesLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.DNIimagenesLabel.Image = ((System.Drawing.Image)(resources.GetObject("DNIimagenesLabel.Image")));
+            this.DNIimagenesLabel.Location = new System.Drawing.Point(477, 31);
+            this.DNIimagenesLabel.Name = "DNIimagenesLabel";
+            this.DNIimagenesLabel.Size = new System.Drawing.Size(38, 20);
+            this.DNIimagenesLabel.TabIndex = 16;
+            this.DNIimagenesLabel.Text = "DNI :";
+            // 
+            // DNIimageTB
+            // 
+            this.DNIimageTB.Location = new System.Drawing.Point(562, 31);
+            this.DNIimageTB.Name = "DNIimageTB";
+            this.DNIimageTB.Size = new System.Drawing.Size(189, 20);
+            this.DNIimageTB.TabIndex = 17;
+            this.DNIimageTB.Text = "c";
+            // 
+            // mostrarFotoBoton
+            // 
+            this.mostrarFotoBoton.Location = new System.Drawing.Point(676, 71);
+            this.mostrarFotoBoton.Name = "mostrarFotoBoton";
+            this.mostrarFotoBoton.Size = new System.Drawing.Size(75, 23);
+            this.mostrarFotoBoton.TabIndex = 18;
+            this.mostrarFotoBoton.Text = "Mostrar fotos";
+            this.mostrarFotoBoton.UseVisualStyleBackColor = true;
+            this.mostrarFotoBoton.Click += new System.EventHandler(this.mostrarFotoBoton_Click_1);
+            // 
             // VentanaDeUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.mostrarFotoBoton);
+            this.Controls.Add(this.DNIimageTB);
+            this.Controls.Add(this.DNIimagenesLabel);
+            this.Controls.Add(this.DNIimagePB);
             this.Controls.Add(this.StockBoton);
             this.Controls.Add(this.buttonmostrar);
             this.Controls.Add(this.tablaUsuarios);
@@ -227,6 +275,7 @@
             this.Text = "GestorDeUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DNIimagePB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +287,6 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Label labelDNI;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPSW;
         private System.Windows.Forms.Label labelNombre;
@@ -249,5 +297,10 @@
         private System.Windows.Forms.DataGridView tablaUsuarios;
         private System.Windows.Forms.Button buttonmostrar;
         private System.Windows.Forms.Button StockBoton;
+        private System.Windows.Forms.PictureBox DNIimagePB;
+        private System.Windows.Forms.Label labelDNI;
+        private System.Windows.Forms.Label DNIimagenesLabel;
+        private System.Windows.Forms.TextBox DNIimageTB;
+        private System.Windows.Forms.Button mostrarFotoBoton;
     }
 }
