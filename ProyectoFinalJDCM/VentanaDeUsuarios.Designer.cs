@@ -191,6 +191,9 @@
             // 
             // StockBoton
             // 
+            this.StockBoton.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockBoton.ForeColor = System.Drawing.SystemColors.Control;
+            this.StockBoton.Image = ((System.Drawing.Image)(resources.GetObject("StockBoton.Image")));
             this.StockBoton.Location = new System.Drawing.Point(656, 377);
             this.StockBoton.Name = "StockBoton";
             this.StockBoton.Size = new System.Drawing.Size(95, 60);

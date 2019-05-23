@@ -109,6 +109,9 @@
             // 
             // registroBoton
             // 
+            this.registroBoton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("registroBoton.BackgroundImage")));
+            this.registroBoton.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registroBoton.ForeColor = System.Drawing.SystemColors.Control;
             this.registroBoton.Location = new System.Drawing.Point(162, 203);
             this.registroBoton.Name = "registroBoton";
             this.registroBoton.Size = new System.Drawing.Size(107, 33);

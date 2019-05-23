@@ -137,9 +137,9 @@
             // 
             // buttonGestionPelis
             // 
+            this.buttonGestionPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonGestionPelis.BackgroundImage")));
             this.buttonGestionPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGestionPelis.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonGestionPelis.Image = ((System.Drawing.Image)(resources.GetObject("buttonGestionPelis.Image")));
             this.buttonGestionPelis.Location = new System.Drawing.Point(537, 374);
             this.buttonGestionPelis.Name = "buttonGestionPelis";
             this.buttonGestionPelis.Size = new System.Drawing.Size(103, 58);
@@ -150,6 +150,9 @@
             // 
             // buttonGestionActores
             // 
+            this.buttonGestionActores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonGestionActores.BackgroundImage")));
+            this.buttonGestionActores.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGestionActores.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonGestionActores.Location = new System.Drawing.Point(655, 374);
             this.buttonGestionActores.Name = "buttonGestionActores";
             this.buttonGestionActores.Size = new System.Drawing.Size(103, 58);

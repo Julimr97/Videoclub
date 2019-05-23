@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaGestionActores));
             this.tablaActores = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.labelId = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelApellidos = new System.Windows.Forms.Label();
+            this.labelGenero = new System.Windows.Forms.Label();
+            this.labelCantidad = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
@@ -43,7 +44,7 @@
             this.buttonRegistrar = new System.Windows.Forms.Button();
             this.buttonMostrarActores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaActores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaActores
@@ -51,102 +52,124 @@
             this.tablaActores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaActores.Location = new System.Drawing.Point(13, 109);
             this.tablaActores.Name = "tablaActores";
-            this.tablaActores.Size = new System.Drawing.Size(458, 329);
+            this.tablaActores.Size = new System.Drawing.Size(382, 329);
             this.tablaActores.TabIndex = 0;
+            this.tablaActores.Visible = false;
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(13, 13);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(228, 90);
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
-            // label1
+            // labelId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(561, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID";
+            this.labelId.AutoSize = true;
+            this.labelId.BackColor = System.Drawing.Color.Transparent;
+            this.labelId.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelId.Location = new System.Drawing.Point(533, 111);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(27, 19);
+            this.labelId.TabIndex = 2;
+            this.labelId.Text = "ID :";
             // 
-            // label2
+            // labelNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(561, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre";
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombre.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelNombre.Location = new System.Drawing.Point(496, 134);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(64, 19);
+            this.labelNombre.TabIndex = 3;
+            this.labelNombre.Text = "Nombre :";
             // 
-            // label3
+            // labelApellidos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(561, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Apellidos";
+            this.labelApellidos.AutoSize = true;
+            this.labelApellidos.BackColor = System.Drawing.Color.Transparent;
+            this.labelApellidos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidos.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelApellidos.Location = new System.Drawing.Point(487, 163);
+            this.labelApellidos.Name = "labelApellidos";
+            this.labelApellidos.Size = new System.Drawing.Size(73, 19);
+            this.labelApellidos.TabIndex = 4;
+            this.labelApellidos.Text = "Apellidos :";
             // 
-            // label4
+            // labelGenero
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(561, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Genero";
+            this.labelGenero.AutoSize = true;
+            this.labelGenero.BackColor = System.Drawing.Color.Transparent;
+            this.labelGenero.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenero.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelGenero.Location = new System.Drawing.Point(500, 193);
+            this.labelGenero.Name = "labelGenero";
+            this.labelGenero.Size = new System.Drawing.Size(60, 19);
+            this.labelGenero.TabIndex = 5;
+            this.labelGenero.Text = "Genero :";
             // 
-            // label5
+            // labelCantidad
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(497, 214);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Cantidas de peleliculas protagonizadas";
+            this.labelCantidad.AutoSize = true;
+            this.labelCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.labelCantidad.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCantidad.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCantidad.Location = new System.Drawing.Point(409, 219);
+            this.labelCantidad.Name = "labelCantidad";
+            this.labelCantidad.Size = new System.Drawing.Size(151, 19);
+            this.labelCantidad.TabIndex = 6;
+            this.labelCantidad.Text = "Cantidas de películas :";
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(603, 109);
+            this.textBoxID.Location = new System.Drawing.Point(566, 110);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(152, 20);
             this.textBoxID.TabIndex = 7;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(603, 135);
+            this.textBoxNombre.Location = new System.Drawing.Point(566, 136);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(152, 20);
             this.textBoxNombre.TabIndex = 8;
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(603, 164);
+            this.textBoxApellidos.Location = new System.Drawing.Point(566, 165);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(152, 20);
             this.textBoxApellidos.TabIndex = 9;
             // 
             // textBoxGenero
             // 
-            this.textBoxGenero.Location = new System.Drawing.Point(603, 191);
+            this.textBoxGenero.Location = new System.Drawing.Point(566, 192);
             this.textBoxGenero.Name = "textBoxGenero";
             this.textBoxGenero.Size = new System.Drawing.Size(152, 20);
             this.textBoxGenero.TabIndex = 10;
             // 
             // textBoxProtagonizadas
             // 
-            this.textBoxProtagonizadas.Location = new System.Drawing.Point(603, 230);
+            this.textBoxProtagonizadas.Location = new System.Drawing.Point(566, 218);
             this.textBoxProtagonizadas.Name = "textBoxProtagonizadas";
             this.textBoxProtagonizadas.Size = new System.Drawing.Size(152, 20);
             this.textBoxProtagonizadas.TabIndex = 11;
             // 
             // buttonRegistrar
             // 
-            this.buttonRegistrar.Location = new System.Drawing.Point(680, 288);
+            this.buttonRegistrar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonRegistrar.Image")));
+            this.buttonRegistrar.Location = new System.Drawing.Point(566, 253);
             this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegistrar.Size = new System.Drawing.Size(152, 36);
             this.buttonRegistrar.TabIndex = 12;
             this.buttonRegistrar.Text = "REGISTRAR";
             this.buttonRegistrar.UseVisualStyleBackColor = true;
@@ -154,9 +177,12 @@
             // 
             // buttonMostrarActores
             // 
-            this.buttonMostrarActores.Location = new System.Drawing.Point(680, 359);
+            this.buttonMostrarActores.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMostrarActores.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMostrarActores.Image = ((System.Drawing.Image)(resources.GetObject("buttonMostrarActores.Image")));
+            this.buttonMostrarActores.Location = new System.Drawing.Point(435, 354);
             this.buttonMostrarActores.Name = "buttonMostrarActores";
-            this.buttonMostrarActores.Size = new System.Drawing.Size(75, 63);
+            this.buttonMostrarActores.Size = new System.Drawing.Size(75, 76);
             this.buttonMostrarActores.TabIndex = 13;
             this.buttonMostrarActores.Text = "Mostrar Actores";
             this.buttonMostrarActores.UseVisualStyleBackColor = true;
@@ -166,6 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonMostrarActores);
             this.Controls.Add(this.buttonRegistrar);
@@ -174,17 +201,17 @@
             this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.labelCantidad);
+            this.Controls.Add(this.labelGenero);
+            this.Controls.Add(this.labelApellidos);
+            this.Controls.Add(this.labelNombre);
+            this.Controls.Add(this.labelId);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.tablaActores);
             this.Name = "VentanaGestionActores";
             this.Text = "VentanaGestionActores";
             ((System.ComponentModel.ISupportInitialize)(this.tablaActores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,12 +220,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView tablaActores;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelApellidos;
+        private System.Windows.Forms.Label labelGenero;
+        private System.Windows.Forms.Label labelCantidad;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxApellidos;

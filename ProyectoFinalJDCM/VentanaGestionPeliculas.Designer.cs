@@ -50,9 +50,9 @@
             // tablaPeliculas
             // 
             this.tablaPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaPeliculas.Location = new System.Drawing.Point(24, 117);
+            this.tablaPeliculas.Location = new System.Drawing.Point(12, 117);
             this.tablaPeliculas.Name = "tablaPeliculas";
-            this.tablaPeliculas.Size = new System.Drawing.Size(371, 280);
+            this.tablaPeliculas.Size = new System.Drawing.Size(410, 321);
             this.tablaPeliculas.TabIndex = 0;
             this.tablaPeliculas.Visible = false;
             // 
@@ -72,9 +72,9 @@
             this.buttonRegistrarPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonRegistrarPelis.BackgroundImage")));
             this.buttonRegistrarPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistrarPelis.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonRegistrarPelis.Location = new System.Drawing.Point(599, 293);
+            this.buttonRegistrarPelis.Location = new System.Drawing.Point(599, 258);
             this.buttonRegistrarPelis.Name = "buttonRegistrarPelis";
-            this.buttonRegistrarPelis.Size = new System.Drawing.Size(100, 30);
+            this.buttonRegistrarPelis.Size = new System.Drawing.Size(157, 30);
             this.buttonRegistrarPelis.TabIndex = 2;
             this.buttonRegistrarPelis.Text = "Registrar";
             this.buttonRegistrarPelis.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             this.buttonMostrarPelis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMostrarPelis.BackgroundImage")));
             this.buttonMostrarPelis.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMostrarPelis.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonMostrarPelis.Location = new System.Drawing.Point(599, 342);
+            this.buttonMostrarPelis.Location = new System.Drawing.Point(448, 336);
             this.buttonMostrarPelis.Name = "buttonMostrarPelis";
-            this.buttonMostrarPelis.Size = new System.Drawing.Size(100, 61);
+            this.buttonMostrarPelis.Size = new System.Drawing.Size(89, 61);
             this.buttonMostrarPelis.TabIndex = 3;
             this.buttonMostrarPelis.Text = "Mostar Peliculas";
             this.buttonMostrarPelis.UseVisualStyleBackColor = true;
@@ -97,35 +97,35 @@
             // 
             this.textBoxID.Location = new System.Drawing.Point(599, 117);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxID.Size = new System.Drawing.Size(157, 20);
             this.textBoxID.TabIndex = 4;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(599, 143);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(157, 20);
             this.textBoxNombre.TabIndex = 5;
             // 
             // textBoxYear
             // 
             this.textBoxYear.Location = new System.Drawing.Point(599, 169);
             this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(100, 20);
+            this.textBoxYear.Size = new System.Drawing.Size(157, 20);
             this.textBoxYear.TabIndex = 6;
             // 
             // textBoxRank
             // 
             this.textBoxRank.Location = new System.Drawing.Point(599, 195);
             this.textBoxRank.Name = "textBoxRank";
-            this.textBoxRank.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRank.Size = new System.Drawing.Size(157, 20);
             this.textBoxRank.TabIndex = 7;
             // 
             // textBoxStock
             // 
             this.textBoxStock.Location = new System.Drawing.Point(599, 221);
             this.textBoxStock.Name = "textBoxStock";
-            this.textBoxStock.Size = new System.Drawing.Size(100, 20);
+            this.textBoxStock.Size = new System.Drawing.Size(157, 20);
             this.textBoxStock.TabIndex = 8;
             // 
             // labelID

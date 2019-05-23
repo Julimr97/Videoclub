@@ -64,5 +64,12 @@ namespace ProyectoFinalJDCM
                 tablaActores.DataSource = datos;
             }
         }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+            ventanaPrincipal.Visible = true;
+        }
     }
 }
